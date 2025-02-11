@@ -14,15 +14,16 @@ function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: 42.3736, lng: -72.5199 }, // Amherst, MA
         zoom: 13,
-        minZoom: 12, 
-        maxZoom: 18, 
+        minZoom: 12,
+        maxZoom: 18,
         mapTypeId: "hybrid",
-        tilt: 45, 
-        streetViewControl: true,  // Enable Pegman for Street View
-        zoomControl: true,        // Show zoom buttons
-        fullscreenControl: true,  // Enable fullscreen mode
-        mapTypeControl: true,     // Allow changing map types
-        scaleControl: true        // Show scale for reference
+        tilt: 45,
+        streetViewControl: true,   // Enable Pegman
+        zoomControl: true,         // Show zoom buttons
+        fullscreenControl: true,   // Enable fullscreen mode
+        mapTypeControl: true,      // Allow changing map types
+        scaleControl: true,        // Show scale for reference
+        gestureHandling: "greedy"  // Allow zooming with scroll and gestures
     });
 
     geocoder = new google.maps.Geocoder();
