@@ -18,7 +18,11 @@ function initMap() {
         maxZoom: 18, 
         mapTypeId: "hybrid",
         tilt: 45, 
-        streetViewControl: true
+        streetViewControl: true,  // Enable Pegman for Street View
+        zoomControl: true,        // Show zoom buttons
+        fullscreenControl: true,  // Enable fullscreen mode
+        mapTypeControl: true,     // Allow changing map types
+        scaleControl: true        // Show scale for reference
     });
 
     geocoder = new google.maps.Geocoder();
