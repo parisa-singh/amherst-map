@@ -28,15 +28,17 @@ function initMap() {
 
     geocoder = new google.maps.Geocoder();
 
-        // Ensure Pegman is available
-        map.setOptions({
-            streetViewControl: true,
-            zoomControl: true
-        });
-    
-        // Debug: Log control settings
-        console.log("Street View Control:", map.get("streetViewControl"));
-        console.log("Zoom Control:", map.get("zoomControl"));
+    // Manually enforce control visibility
+    map.setOptions({
+        streetViewControl: true,
+        zoomControl: true,
+        fullscreenControl: true
+    });
+
+    // Debugging: Log control settings
+    console.log("Street View Control:", map.get("streetViewControl"));
+    console.log("Zoom Control:", map.get("zoomControl"));
+    console.log("Fullscreen Control:", map.get("fullscreenControl"));
 
     // Enforce panning limits
     google.maps.event.addListener(map, "dragend", function () {
