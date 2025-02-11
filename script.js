@@ -28,6 +28,16 @@ function initMap() {
 
     geocoder = new google.maps.Geocoder();
 
+        // Ensure Pegman is available
+        map.setOptions({
+            streetViewControl: true,
+            zoomControl: true
+        });
+    
+        // Debug: Log control settings
+        console.log("Street View Control:", map.get("streetViewControl"));
+        console.log("Zoom Control:", map.get("zoomControl"));
+
     // Enforce panning limits
     google.maps.event.addListener(map, "dragend", function () {
         const center = map.getCenter();

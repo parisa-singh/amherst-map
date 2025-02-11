@@ -39,3 +39,18 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+.gm-control-active,
+.gm-fullscreen-control,
+.gm-svpc,
+.gm-style-mtc {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+@media (min-width: 1024px) { /* Desktop-specific fixes */
+    .gm-control-active {
+        display: block !important;
+    }
+}
