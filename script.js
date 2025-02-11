@@ -99,5 +99,12 @@ function addMarker(place) {
     });
 }
 
+// Enable search with "Enter" key
+document.getElementById("search-box").addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        searchLocation();
+    }
+});
+
 // Attach initMap function to the global window object
 window.initMap = initMap;
